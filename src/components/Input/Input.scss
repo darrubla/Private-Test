@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "src/variables.scss";
+@import "src/generales.scss";
+
+.Input-component {
+  margin-bottom: $spacing-s;
+  & label {
+    padding-left: $spacing-xxs;
+    font-weight: 600;
+    color: $neutral-700;
+  }
+}

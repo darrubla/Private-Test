@@ -1,0 +1,20 @@
+@import "src/variables.scss";
+@import "src/generales.scss";
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: $primary-500;
+    color: white;
+    padding: $spacing-xxs $spacing-xs;
+    box-shadow: $shadow-m;
+    border-radius: $spacing-xxs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        // border: 1px $primary-500 solid;
+        border: none;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./variables.scss";
+@import "./generales.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: $ff-body-medium;
+    background-color: $accented-100;
+    ul {
+        li {
+            margin: $spacing-xs;
+        }
+    }
+}
