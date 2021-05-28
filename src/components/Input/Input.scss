@@ -4,6 +4,9 @@
 
 .Input-component {
   margin-bottom: $spacing-s;
+  & input {
+    background-color: $white;
+  }
   & label {
     padding-left: $spacing-xxs;
     font-weight: 600;

@@ -8,7 +8,7 @@ import './index.scss';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Menu} />
         <Route exact path="/:airlineName" component={Form} />
