@@ -14,7 +14,7 @@ export default class InputComponent extends Component {
 		render() {
 				const {
 					className, onChange, placeholder, type, children,
-					name, labelText, isvalid, pattern
+					name, labelText, invalid, pattern, value
 				} = this.props;
 				return (
 					<FormGroup className="Input-component">
@@ -26,8 +26,9 @@ export default class InputComponent extends Component {
 								onChange={onChange}
 								placeholder={placeholder}
 								type={type}
-								valid={isvalid}
+								invalid={invalid}
 								parrern={pattern}
+								value={value}
 								required>
 									{children}
 								</Input>
@@ -45,8 +46,8 @@ InputComponent.propTypes = {
 		name: PropTypes.string.isRequired,
 		labelText: PropTypes.string.isRequired,
 		invalidText: PropTypes.string,
-		isvalid: PropTypes.bool,
-		pattern: PropTypes.string
+		invalid: PropTypes.bool,
+		pattern: PropTypes.string,
 }
 
 InputComponent.defaultProps = {
@@ -55,6 +56,6 @@ InputComponent.defaultProps = {
 		className: 'input',
 		invalidText: 'Los datos ingresados no son validos',
 		children: undefined,
-		isvalid: false,
+		invalid: false,
 		pattern: '.*'
 }

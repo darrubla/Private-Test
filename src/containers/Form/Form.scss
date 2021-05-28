@@ -17,6 +17,7 @@
     & form {
         background-color: $complementary-100;
         padding: $spacing-m;
+        margin-bottom: $spacing-m;
         height: 400px;
         width: 100%;
         max-width: 350px;
@@ -25,5 +26,13 @@
         justify-self: center;
         border-radius: $spacing-m;
         box-shadow: $shadow-m;
+        div {
+            margin-bottom: $spacing-s;
+            & label {
+                padding-left: $spacing-xxs;
+                font-weight: 600;
+                color: $neutral-700;
+            }
+        }
     }
 }
