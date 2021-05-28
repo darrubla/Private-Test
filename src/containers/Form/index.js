@@ -173,7 +173,7 @@ export default class Form extends Component {
                             onChange={this.handleOnChange}
                             value={edad}
                             >
-                            <option value="">Excoge un rango de edad</option>
+                            <option value="">Escoge un rango de edad</option>
                             <option value="18 - 25">18 - 25</option>
                             <option value="26 - 50">26 - 50</option>
                             <option value="51 - 75">51 - 75</option>
