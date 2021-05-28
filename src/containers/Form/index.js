@@ -34,14 +34,14 @@ export default class Form extends Component {
         } = this.state;
         if (name !== '' && email !== '' && celular !== '' && edad !== '' && disabled) {
             if (invalidEmail || invalidCelular) {
-                this.showToast('Verifica los campos marcados en rojo', 'warning');
+                this.showToast('Verifica los campos marcados en rojo', 'warning', 2500);
                 this.setState({disabled: false});
             } else {
                 console.log('@nombre: ', name);
                 console.log('@email: ', email);
                 console.log('@celular: ', celular);
                 console.log('@edad: ', edad);
-                this.showToast('Tu información fue enviada con éxito, estaremos en contacto contigo', 'success');
+                this.showToast('Tu información fue enviada con éxito, estaremos en contacto contigo', 'success', 5000);
                 setTimeout(() => this.clearFields(), 5000);
             }
         }
@@ -75,10 +75,10 @@ export default class Form extends Component {
         })
     }
 
-    showToast = (text, type) => {
+    showToast = (text, type, time) => {
         toast[type](text, {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: time,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -104,7 +104,7 @@ export default class Form extends Component {
         if (name !== '' && email !== '' && celular !== '' && edad !== '') {
             this.validateFields();
         } else {
-            this.showToast('Debes llenar todos los campos', 'error');
+            this.showToast('Debes llenar todos los campos', 'error', 2500);
             this.setState({disabled: false});
         }
     }
